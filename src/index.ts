@@ -15,14 +15,34 @@ export * as mentalHealth from './layers/mental-health.js';
 export * as history from './layers/history.js';
 export * as culture from './layers/culture.js';
 
-// Re-export void walker primitives
+// Re-export void primitives from gnosis core
 export {
   type VoidBoundary,
   createVoidBoundary,
   updateVoidBoundary,
   decayVoidBoundary,
   complementDistribution,
-} from '../../gnosis/src/runtime/void-walker.js';
+  // The primitives that let personality fold into the universal substrate
+  type Measurement,
+  measure,
+  type Timescale,
+  type TimescaleBoundary,
+  createTimescaleBoundary,
+  type BoundaryStack,
+  createBoundaryStack,
+  tickBoundaryStack,
+  measureStack,
+  flattenStack,
+  type Resonance,
+  createResonance,
+  projectBoundary,
+  type Walker,
+  createWalker,
+  type StackWalker,
+  createStackWalker,
+  stepStackWalker,
+  measureStackWalker,
+} from '../../gnosis/src/void.js';
 
 // Re-export behavioral taxonomy types
 export type {

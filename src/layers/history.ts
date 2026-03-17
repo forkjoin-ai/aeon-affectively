@@ -11,7 +11,7 @@ import {
   createVoidBoundary,
   updateVoidBoundary,
   decayVoidBoundary,
-} from '../../../gnosis/src/runtime/void-walker.js';
+} from '../../../gnosis/src/void.js';
 
 export const HISTORY_DIMENSIONS = [
   'trauma',

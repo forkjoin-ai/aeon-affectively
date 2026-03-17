@@ -12,7 +12,7 @@ import {
   type VoidBoundary,
   createVoidBoundary,
   updateVoidBoundary,
-} from '../../../gnosis/src/runtime/void-walker.js';
+} from '../../../gnosis/src/void.js';
 import type {
   BehavioralLoopRecord,
 } from '../../../gnosis/src/behavioral-taxonomy.js';

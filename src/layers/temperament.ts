@@ -10,7 +10,7 @@ import {
   type VoidBoundary,
   createVoidBoundary,
   updateVoidBoundary,
-} from '../../../gnosis/src/runtime/void-walker.js';
+} from '../../../gnosis/src/void.js';
 
 /** Dimensions of the temperament void boundary */
 export const TEMPERAMENT_DIMENSIONS = [

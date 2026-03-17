@@ -12,7 +12,7 @@ import {
   createVoidBoundary,
   updateVoidBoundary,
   complementDistribution,
-} from '../../../gnosis/src/runtime/void-walker.js';
+} from '../../../gnosis/src/void.js';
 
 export const MENTAL_HEALTH_DIMENSIONS = [
   'anxiety',

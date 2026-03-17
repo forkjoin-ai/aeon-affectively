@@ -10,7 +10,7 @@ import {
   type VoidBoundary,
   createVoidBoundary,
   updateVoidBoundary,
-} from '../../../gnosis/src/runtime/void-walker.js';
+} from '../../../gnosis/src/void.js';
 
 export const ATTACHMENT_DIMENSIONS = [
   'secure',
