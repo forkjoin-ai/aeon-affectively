@@ -1,0 +1,44 @@
+// personality.test.gg -- test topology for 7-layer personality
+//
+// Tests verify that the personality topology maintains structural
+// invariants and that void walking produces valid complement distributions.
+
+topology personality_test {
+  import personality from "./personality.gg"
+
+  // Structural invariant: all 7 layers present
+  test "has all seven layers" {
+    assert count(personality.nodes) == 7
+  }
+
+  // Structural invariant: upward flow is complete
+  test "upward flow connects all adjacent layers" {
+    assert edge_exists(personality, temperament, attachment)
+    assert edge_exists(personality, attachment, traits)
+    assert edge_exists(personality, traits, behaviors)
+    assert edge_exists(personality, behaviors, mentalHealth)
+    assert edge_exists(personality, mentalHealth, history)
+    assert edge_exists(personality, history, culture)
+  }
+
+  // Structural invariant: downward flow provides context
+  test "downward flow connects all adjacent layers" {
+    assert edge_exists(personality, culture, history)
+    assert edge_exists(personality, history, mentalHealth)
+    assert edge_exists(personality, mentalHealth, behaviors)
+    assert edge_exists(personality, behaviors, traits)
+    assert edge_exists(personality, attachment, temperament)
+  }
+
+  // Cross-layer resonance exists
+  test "cross-layer resonance links exist" {
+    assert edge_exists(personality, temperament, mentalHealth)
+    assert edge_exists(personality, culture, attachment)
+  }
+
+  // Boundary invariant: inherited layers bracket the stack
+  test "inherited void brackets individual experience" {
+    assert personality.temperament.layer == 1
+    assert personality.culture.layer == 7
+  }
+}

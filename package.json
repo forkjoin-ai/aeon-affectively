@@ -1,0 +1,16 @@
+{
+  "name": "@affectively/aeon-affectively",
+  "version": "0.1.0",
+  "description": "Personality and emotion tracking as void walking over complement distributions",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "bun test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

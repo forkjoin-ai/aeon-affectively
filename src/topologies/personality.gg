@@ -1,0 +1,38 @@
+// personality.gg -- 7-layer personality as gnosis topology
+//
+// The personality is a cascade of void boundaries, each operating
+// at a different timescale. Layer 1 (temperament) and Layer 7 (culture)
+// are inherited void -- they bracket the individual's experience.
+//
+// Flow: inherited void → singularity patterns → distribution shape →
+//       gait selection → kurtosis → boundary itself → generational trace
+
+topology personality {
+  // Inherited void (bottom)
+  node temperament : layer(1, "inherited void -- birth configuration")
+  node attachment  : layer(2, "earliest void singularity patterns")
+  node traits      : layer(3, "complement distribution shape")
+  node behaviors   : layer(4, "gait selection")
+  node mentalHealth: layer(5, "kurtosis of complement distribution")
+  node history     : layer(6, "the void boundary itself")
+  node culture     : layer(7, "inherited void -- generational trace")
+
+  // Upward flow: deeper layers constrain shallower ones
+  edge temperament -> attachment  : constrains("biological baseline shapes attachment")
+  edge attachment  -> traits      : constrains("attachment patterns shape trait expression")
+  edge traits      -> behaviors   : constrains("traits determine behavioral repertoire")
+  edge behaviors   -> mentalHealth: constrains("behavioral patterns affect mental state")
+  edge mentalHealth -> history    : constrains("mental state filters historical processing")
+  edge history     -> culture     : constrains("personal history reinterprets cultural inheritance")
+
+  // Downward flow: context shapes interpretation
+  edge culture     -> history     : contextualizes("culture frames historical meaning")
+  edge history     -> mentalHealth: contextualizes("history provides resilience or vulnerability")
+  edge mentalHealth -> behaviors  : contextualizes("mental state modulates behavioral thresholds")
+  edge behaviors   -> traits      : contextualizes("behavioral feedback reshapes trait expression")
+  edge attachment  -> temperament : contextualizes("attachment experience modulates temperament expression")
+
+  // Cross-layer resonance
+  edge temperament -> mentalHealth: resonates("biological vulnerability ↔ mental state")
+  edge culture     -> attachment  : resonates("cultural norms ↔ attachment expectations")
+}
