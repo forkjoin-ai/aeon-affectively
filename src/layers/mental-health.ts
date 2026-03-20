@@ -69,7 +69,7 @@ export function initializeFromBaseline(
       emotionalBurnout?: boolean;
       duration?: number;
     };
-  },
+  }
 ): void {
   if (baseline.anxietyLevel !== undefined) {
     updateVoidBoundary(layer.boundary, 0, baseline.anxietyLevel / 10);
@@ -88,7 +88,11 @@ export function initializeFromBaseline(
       updateVoidBoundary(layer.boundary, 3, 1);
     }
     if (baseline.chronicStress.duration !== undefined) {
-      updateVoidBoundary(layer.boundary, 4, baseline.chronicStress.duration / 52);
+      updateVoidBoundary(
+        layer.boundary,
+        4,
+        baseline.chronicStress.duration / 52
+      );
     }
   }
 }

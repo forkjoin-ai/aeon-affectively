@@ -35,11 +35,19 @@ export function createAttachmentLayer(): AttachmentLayer {
 }
 
 /** Attachment style weights -- how much void each style accumulates */
-const STYLE_WEIGHTS: Record<string, Partial<Record<AttachmentDimension, number>>> = {
+const STYLE_WEIGHTS: Record<
+  string,
+  Partial<Record<AttachmentDimension, number>>
+> = {
   secure: { secure: 1.0, trustLevel: 0.8 },
   anxious: { anxious: 1.0, trustLevel: 0.3 },
   avoidant: { avoidant: 1.0, trustLevel: 0.2 },
-  disorganized: { disorganized: 1.0, anxious: 0.5, avoidant: 0.5, trustLevel: 0.1 },
+  disorganized: {
+    disorganized: 1.0,
+    anxious: 0.5,
+    avoidant: 0.5,
+    trustLevel: 0.1,
+  },
 };
 
 export function initializeFromBaseline(
@@ -47,7 +55,7 @@ export function initializeFromBaseline(
   baseline: {
     attachment_style?: 'secure' | 'anxious' | 'avoidant' | 'disorganized';
     trustLevels?: number;
-  },
+  }
 ): void {
   if (baseline.attachment_style) {
     const weights = STYLE_WEIGHTS[baseline.attachment_style];

@@ -13,9 +13,7 @@ import {
   createVoidBoundary,
   updateVoidBoundary,
 } from '../../../gnosis/src/void.js';
-import type {
-  BehavioralLoopRecord,
-} from '../../../gnosis/src/behavioral-taxonomy.js';
+import type { BehavioralLoopRecord } from '../../../gnosis/src/behavioral-taxonomy.js';
 
 export type Gait = 'stand' | 'trot' | 'canter' | 'gallop';
 
@@ -55,7 +53,7 @@ export function initializeFromBaseline(
     habitual_behaviors?: string[];
     behavior_patterns?: Record<string, number>;
     copingMechanisms?: string[];
-  },
+  }
 ): void {
   if (baseline.habitual_behaviors) {
     for (const behavior of baseline.habitual_behaviors) {
@@ -75,7 +73,7 @@ export function initializeFromBaseline(
 export function recordBehavioralLoop(
   layer: BehaviorsLayer,
   loop: BehavioralLoopRecord,
-  magnitude: number = 1,
+  magnitude: number = 1
 ): void {
   const idx = layer.behaviorIndex.get(loop.name);
   if (idx !== undefined) {

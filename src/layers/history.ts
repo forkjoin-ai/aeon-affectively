@@ -50,9 +50,12 @@ export function initializeFromBaseline(
       failures?: string[];
     };
     majorLifeEvents?: Array<{ event: string }>;
-  },
+  }
 ): void {
-  if (baseline.pastTrauma?.hasTrauma && baseline.pastTrauma.impactLevel !== undefined) {
+  if (
+    baseline.pastTrauma?.hasTrauma &&
+    baseline.pastTrauma.impactLevel !== undefined
+  ) {
     updateVoidBoundary(layer.boundary, 0, baseline.pastTrauma.impactLevel);
   }
 
@@ -73,7 +76,11 @@ export function initializeFromBaseline(
   }
 
   if (baseline.majorLifeEvents) {
-    updateVoidBoundary(layer.boundary, 5, baseline.majorLifeEvents.length * 0.1);
+    updateVoidBoundary(
+      layer.boundary,
+      5,
+      baseline.majorLifeEvents.length * 0.1
+    );
   }
 }
 

@@ -56,7 +56,7 @@ export function initializeFromBaseline(
       restingHeartRate?: number;
       heartRateVariability?: number;
     };
-  },
+  }
 ): void {
   const values: Record<TemperamentDimension, number | undefined> = {
     neuroticism: baseline.neuroticism,

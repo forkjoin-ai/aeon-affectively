@@ -46,7 +46,7 @@ export function createCultureLayer(): CultureLayer {
  */
 export function initializeFromSignals(
   layer: CultureLayer,
-  signals: Partial<Record<CultureDimension, number>>,
+  signals: Partial<Record<CultureDimension, number>>
 ): void {
   for (let i = 0; i < CULTURE_DIMENSIONS.length; i++) {
     const dim = CULTURE_DIMENSIONS[i];

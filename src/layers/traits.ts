@@ -33,7 +33,7 @@ export function initializeFromBaseline(
   baseline: {
     identified_traits?: string[];
     trait_frequencies?: Record<string, number>;
-  },
+  }
 ): void {
   if (baseline.identified_traits) {
     for (const traitId of baseline.identified_traits) {
