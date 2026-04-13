@@ -2,7 +2,7 @@
  * aeon-affectively
  *
  * Personality and emotion tracking as void walking over complement distributions.
- * The 58-element Float32Array personality vector IS a complement distribution
+ * The 58-element Float32Array personality vector formalizes a complement distribution
  * over a 58-dimensional void boundary.
  */
 

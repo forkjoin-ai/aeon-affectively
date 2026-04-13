@@ -1,9 +1,9 @@
 /**
  * Layer 6: History -- The Void Boundary Itself
  *
- * Personal history IS the void boundary. Every trauma, every success,
+ * Personal history maps to the void boundary. Every trauma, every success,
  * every major life event has shaped the boundary's geometry. This layer
- * is not a projection onto the boundary -- it IS the boundary.
+ * is not a projection onto the boundary -- it maps to the boundary.
  */
 
 import {
