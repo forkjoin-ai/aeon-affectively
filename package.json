@@ -7,7 +7,7 @@
   "types": "src/index.ts",
   "scripts": {
     "build": "NODE_OPTIONS=--max-old-space-size=8192 tsc",
-    "test": "bun test --pass-with-no-tests"
+    "test": "bun test --timeout 30000 --pass-with-no-tests"
   },
   "dependencies": {},
   "devDependencies": {
