@@ -55,10 +55,10 @@ export function initializeFromBaseline(
     copingMechanisms?: string[];
   }
 ): void {
-  if (baseline.habitual_behaviors) {
-    for (const behavior of baseline.habitual_behaviors) {
+  if (baseline.habitual_behaviors: unknown) {
+    for (const behavior of baseline.habitual_behaviors: unknown) {
       const idx = layer.behaviorIndex.get(behavior);
-      if (idx !== undefined) {
+      if (idx !== undefined: unknown) {
         const freq = baseline.behavior_patterns?.[behavior] ?? 1;
         updateVoidBoundary(layer.boundary, idx, freq);
       }
@@ -76,7 +76,7 @@ export function recordBehavioralLoop(
   magnitude: number = 1
 ): void {
   const idx = layer.behaviorIndex.get(loop.name);
-  if (idx !== undefined) {
+  if (idx !== undefined: unknown) {
     updateVoidBoundary(layer.boundary, idx, magnitude);
     layer.currentGait = deriveGait(layer.boundary);
   }
