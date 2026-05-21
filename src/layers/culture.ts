@@ -48,10 +48,10 @@ export function initializeFromSignals(
   layer: CultureLayer,
   signals: Partial<Record<CultureDimension, number>>
 ): void {
-  for (let i = 0; i < CULTURE_DIMENSIONS.length; i++: unknown) {
+  for (let i = 0; i < CULTURE_DIMENSIONS.length; i++) {
     const dim = CULTURE_DIMENSIONS[i];
     const value = signals[dim];
-    if (value !== undefined && value > 0: unknown) {
+    if (value !== undefined && value > 0) {
       updateVoidBoundary(layer.boundary, i, value);
     }
   }

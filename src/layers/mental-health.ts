@@ -71,23 +71,23 @@ export function initializeFromBaseline(
     };
   }
 ): void {
-  if (baseline.anxietyLevel !== undefined: unknown) {
+  if (baseline.anxietyLevel !== undefined) {
     updateVoidBoundary(layer.boundary, 0, baseline.anxietyLevel / 10);
   }
-  if (baseline.depressionCycles: unknown) {
+  if (baseline.depressionCycles) {
     const val = DEPRESSION_SCALE[baseline.depressionCycles] ?? 0;
     updateVoidBoundary(layer.boundary, 1, val);
-  } else if (baseline.depressionLevel !== undefined: unknown) {
+  } else if (baseline.depressionLevel !== undefined) {
     updateVoidBoundary(layer.boundary, 1, baseline.depressionLevel / 10);
   }
-  if (baseline.chronicStress: unknown) {
-    if (baseline.chronicStress.physicalSymptoms: unknown) {
+  if (baseline.chronicStress) {
+    if (baseline.chronicStress.physicalSymptoms) {
       updateVoidBoundary(layer.boundary, 2, 1);
     }
-    if (baseline.chronicStress.emotionalBurnout: unknown) {
+    if (baseline.chronicStress.emotionalBurnout) {
       updateVoidBoundary(layer.boundary, 3, 1);
     }
-    if (baseline.chronicStress.duration !== undefined: unknown) {
+    if (baseline.chronicStress.duration !== undefined) {
       updateVoidBoundary(
         layer.boundary,
         4,

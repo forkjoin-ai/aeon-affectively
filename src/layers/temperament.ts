@@ -69,10 +69,10 @@ export function initializeFromBaseline(
     heartRateVariability: baseline.baseline_metrics?.heartRateVariability,
   };
 
-  for (let i = 0; i < TEMPERAMENT_DIMENSIONS.length; i++: unknown) {
+  for (let i = 0; i < TEMPERAMENT_DIMENSIONS.length; i++) {
     const dim = TEMPERAMENT_DIMENSIONS[i];
     const value = values[dim];
-    if (value !== undefined && value > 0: unknown) {
+    if (value !== undefined && value > 0) {
       updateVoidBoundary(layer.boundary, i, value);
     }
   }

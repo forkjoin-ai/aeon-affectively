@@ -53,27 +53,27 @@ export function initializeFromBaseline(
   }
 ): void {
   if (baseline.pastTrauma?.hasTrauma &&
-    baseline.pastTrauma.impactLevel !== undefined: unknown) {
+    baseline.pastTrauma.impactLevel !== undefined) {
     updateVoidBoundary(layer.boundary, 0, baseline.pastTrauma.impactLevel);
   }
 
-  if (baseline.learningHistory: unknown) {
+  if (baseline.learningHistory) {
     const lh = baseline.learningHistory;
-    if (lh.copingMechanisms: unknown) {
+    if (lh.copingMechanisms) {
       updateVoidBoundary(layer.boundary, 1, lh.copingMechanisms.length * 0.1);
     }
-    if (lh.behavioralPatterns: unknown) {
+    if (lh.behavioralPatterns) {
       updateVoidBoundary(layer.boundary, 2, lh.behavioralPatterns.length * 0.1);
     }
-    if (lh.successes: unknown) {
+    if (lh.successes) {
       updateVoidBoundary(layer.boundary, 3, lh.successes.length * 0.1);
     }
-    if (lh.failures: unknown) {
+    if (lh.failures) {
       updateVoidBoundary(layer.boundary, 4, lh.failures.length * 0.1);
     }
   }
 
-  if (baseline.majorLifeEvents: unknown) {
+  if (baseline.majorLifeEvents) {
     updateVoidBoundary(
       layer.boundary,
       5,

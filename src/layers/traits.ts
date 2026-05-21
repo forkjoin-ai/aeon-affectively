@@ -35,10 +35,10 @@ export function initializeFromBaseline(
     trait_frequencies?: Record<string, number>;
   }
 ): void {
-  if (baseline.identified_traits: unknown) {
-    for (const traitId of baseline.identified_traits: unknown) {
+  if (baseline.identified_traits) {
+    for (const traitId of baseline.identified_traits) {
       const idx = layer.traitIndex.get(traitId);
-      if (idx !== undefined: unknown) {
+      if (idx !== undefined) {
         const freq = baseline.trait_frequencies?.[traitId] ?? 1;
         updateVoidBoundary(layer.boundary, idx, freq);
       }

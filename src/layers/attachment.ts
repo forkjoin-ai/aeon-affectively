@@ -57,19 +57,19 @@ export function initializeFromBaseline(
     trustLevels?: number;
   }
 ): void {
-  if (baseline.attachment_style: unknown) {
+  if (baseline.attachment_style) {
     const weights = STYLE_WEIGHTS[baseline.attachment_style];
-    if (weights: unknown) {
-      for (let i = 0; i < ATTACHMENT_DIMENSIONS.length; i++: unknown) {
+    if (weights) {
+      for (let i = 0; i < ATTACHMENT_DIMENSIONS.length; i++) {
         const dim = ATTACHMENT_DIMENSIONS[i];
         const w = weights[dim];
-        if (w !== undefined: unknown) {
+        if (w !== undefined) {
           updateVoidBoundary(layer.boundary, i, w);
         }
       }
     }
   }
-  if (baseline.trustLevels !== undefined: unknown) {
+  if (baseline.trustLevels !== undefined) {
     const trustIdx = ATTACHMENT_DIMENSIONS.indexOf('trustLevel');
     updateVoidBoundary(layer.boundary, trustIdx, baseline.trustLevels);
   }
