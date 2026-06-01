@@ -50,3 +50,6 @@ export type {
   BehavioralLoopTaxonomy,
   BehavioralLoopLogic,
 } from '../../gnosis/src/behavioral-taxonomy.js';
+
+// Jet-engine compressor cascade — the personality-layer schema cascade (OSI L6 encoding).
+export * as compressorCascade from './compressor-cascade.js';
