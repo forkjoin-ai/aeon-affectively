@@ -1,0 +1,108 @@
+# aeon-affectively — easy-deploy site (driven entirely by this file).
+#
+# Deploy with:  a0 xr deploy
+#
+# Content is sourced from open-source/aeon-affectively/README.md — keep it honest.
+
+name = "aeon-affectively-site"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+[site]
+kit = "oss-template"
+title = "aeon-affectively — personality & emotion tracking as void walking"
+
+[site.project]
+name = "aeon-affectively"
+tagline = "Personality and emotion tracking reimagined on the void walking foundation."
+description = "A 7-layer personality model mapped directly onto void walking structures. The 58-element personality vector becomes a complement distribution over a 58-dimensional void boundary, and emotion tracking becomes a measurement of where the walker stands relative to that boundary."
+logo = "orb"
+accent = "#a855f7"
+theme = "dark"
+repo = "forkjoin-ai/aeon-affectively"
+
+[site.sigil]
+seed = "aeon-affectively"
+motion = "drift"
+coherence = "ring"
+frame = "circle"
+
+[site.nav]
+links = ["Features|#features", "Quickstart|#quickstart", "FAQ|#faq", "Source|https://forgo.cloud/forkjoin-ai/aeon-affectively"]
+
+[site.hero]
+eyebrow = "7-layer personality model · complement distributions · void walking"
+install = "pnpm run gnode -- run open-source/aeon-affectively/src/compressor-cascade.verify.ts"
+cta_primary = "Get started"
+cta_primary_href = "#quickstart"
+cta_secondary = "Browse the source"
+cta_secondary_href = "https://forgo.cloud/forkjoin-ai/aeon-affectively"
+
+[[site.features]]
+icon = "layers"
+title = "Seven-layer personality model"
+body = "Temperament, attachment, traits, behaviors, mental health, history, and culture — each layer maps to a different timescale of void accumulation, from inherited birth configuration to generational trace."
+
+[[site.features]]
+icon = "globe"
+title = "Personality as a complement distribution"
+body = "The 58-element personality vector is a complement distribution over a 58-dimensional void boundary. Traits are the shape of that distribution; mental health is its kurtosis; history is the boundary itself."
+
+[[site.features]]
+icon = "branch"
+title = "Emotion as a walker's stance"
+body = "Emotion tracking becomes the measurement of where the walker stands relative to the void boundary. Behaviors are gait selection — stand, trot, canter, gallop — over that boundary."
+
+[[site.features]]
+icon = "cpu"
+title = "Jet-engine compressor cascade"
+body = "The personality state is a stack of fixed-schema void boundaries, one per layer. Each layer multiplexes its named dimensions into a single boundary index space — the OSI L6 presentation layer for personality-state encoding."
+
+[[site.features]]
+icon = "gauge"
+title = "Product-law compression: 7200x"
+body = "Overall ratio is the product of per-layer dimension counts: 8 · 5 · 5 · 6 · 6 = 7200x — the cardinality of the joint per-position configuration index space one personality-vector position encodes. The product law predicts it exactly (residual = 1.000)."
+
+[[site.features]]
+icon = "shield"
+title = "Built on the gnosis foundation"
+body = "Runs on gnosis/void-walker (the core void walking engine), gnosis/behavioral-taxonomy (behavioral loop classification), and shared-ui/aic/types (ProfileBaseline personality types)."
+
+[site.quickstart]
+title = "Verify the cascade"
+
+[[site.quickstart.tab]]
+label = "Verify"
+code = "# verify the jet-engine compressor cascade (8 · 5 · 5 · 6 · 6 = 7200x)\npnpm run gnode -- run open-source/aeon-affectively/src/compressor-cascade.verify.ts"
+
+[[site.quickstart.tab]]
+label = "Layers"
+code = "# the 7 personality layers, by timescale of void accumulation\n# 1 Temperament   inherited void — birth configuration\n# 2 Attachment    earliest void singularity patterns\n# 3 Traits        shape of the complement distribution\n# 4 Behaviors     gait selection (stand/trot/canter/gallop)\n# 5 Mental Health  kurtosis of the complement distribution\n# 6 History        the void boundary itself\n# 7 Culture        inherited void — generational trace"
+
+[[site.faq]]
+q = "What is the void walking foundation?"
+a = "The 7-layer personality model maps directly to void walking structures. The 58-element personality vector is a complement distribution over a 58-dimensional void boundary, and each personality layer represents a different timescale of void accumulation."
+
+[[site.faq]]
+q = "Where does the 7200x compression ratio come from?"
+a = "The cascade's overall ratio is the product of the per-layer dimension counts — the jet-engine compressor law where overall equals the product of stage ratios. Reading each layer's *_DIMENSIONS constant: temperament 8, attachment 5, mentalHealth 5, history 6, culture 6 gives 8 · 5 · 5 · 6 · 6 = 7200x. The dynamic Traits and Behaviors layers carry no fixed schema and are excluded."
+
+[[site.faq]]
+q = "How is emotion represented?"
+a = "Emotion tracking becomes the measurement of where the walker stands relative to the void boundary. Behaviors are gait selection over that boundary; mental health is the kurtosis of the complement distribution."
+
+[[site.faq]]
+q = "What does it build on?"
+a = "gnosis/void-walker for the core void walking engine, gnosis/behavioral-taxonomy for behavioral loop classification, and shared-ui/aic/types for ProfileBaseline personality types. The cascade module mirrors open-source/aether and the Rust gnosis/gnosis-engine-core crate."
+
+[site.footer]
+quote = "Emotion tracking is measurement of where the walker stands relative to the boundary."
+copyright = "© 2026 forkjoin-ai · aeon-affectively contributors"
+
+[[site.footer.column]]
+title = "Project"
+links = ["Source|https://forgo.cloud/forkjoin-ai/aeon-affectively", "Verify|https://forgo.cloud/forkjoin-ai/aeon-affectively"]
+
+[[site.footer.column]]
+title = "Foundation"
+links = ["void-walker|https://forgo.cloud/forkjoin-ai/gnosis", "behavioral-taxonomy|https://forgo.cloud/forkjoin-ai/gnosis"]
