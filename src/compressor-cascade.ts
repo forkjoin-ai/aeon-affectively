@@ -60,6 +60,9 @@ export interface Stage {
   readonly ratio: number;
 }
 
+/**
+ * Handles the aeon affectively stage workflow.
+ */
 export function stage(name: string, ratio: number): Stage {
   return { name, ratio };
 }
@@ -105,6 +108,9 @@ export interface CascadeReport {
   readonly theoremIds: readonly string[];
 }
 
+/**
+ * Handles the aeon affectively cascade Report workflow.
+ */
 export function cascadeReport(
   label: string,
   stages: readonly Stage[],

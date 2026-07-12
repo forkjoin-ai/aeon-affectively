@@ -27,6 +27,9 @@ export interface AttachmentLayer {
   dimensions: typeof ATTACHMENT_DIMENSIONS;
 }
 
+/**
+ * Creates the Attachment Layer.
+ */
 export function createAttachmentLayer(): AttachmentLayer {
   return {
     boundary: createVoidBoundary(ATTACHMENT_DIMENSIONS.length),
@@ -50,6 +53,9 @@ const STYLE_WEIGHTS: Record<
   },
 };
 
+/**
+ * Handles the aeon affectively initialize From Baseline workflow.
+ */
 export function initializeFromBaseline(
   layer: AttachmentLayer,
   baseline: {

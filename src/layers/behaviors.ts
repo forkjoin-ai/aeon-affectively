@@ -25,6 +25,9 @@ export interface BehaviorsLayer {
   currentGait: Gait;
 }
 
+/**
+ * Creates the Behaviors Layer.
+ */
 export function createBehaviorsLayer(behaviorNames: string[]): BehaviorsLayer {
   const behaviorIndex = new Map<string, number>();
   behaviorNames.forEach((name, i) => behaviorIndex.set(name, i));
@@ -47,6 +50,9 @@ export function deriveGait(boundary: VoidBoundary): Gait {
   return 'gallop';
 }
 
+/**
+ * Handles the aeon affectively initialize From Baseline workflow.
+ */
 export function initializeFromBaseline(
   layer: BehaviorsLayer,
   baseline: {

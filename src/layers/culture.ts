@@ -32,6 +32,9 @@ export interface CultureLayer {
   dimensions: typeof CULTURE_DIMENSIONS;
 }
 
+/**
+ * Creates the Culture Layer.
+ */
 export function createCultureLayer(): CultureLayer {
   return {
     boundary: createVoidBoundary(CULTURE_DIMENSIONS.length),

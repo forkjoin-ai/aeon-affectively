@@ -29,6 +29,9 @@ export interface MentalHealthLayer {
   dimensions: typeof MENTAL_HEALTH_DIMENSIONS;
 }
 
+/**
+ * Creates the Mental Health Layer.
+ */
 export function createMentalHealthLayer(): MentalHealthLayer {
   return {
     boundary: createVoidBoundary(MENTAL_HEALTH_DIMENSIONS.length),
@@ -58,6 +61,9 @@ const DEPRESSION_SCALE: Record<string, number> = {
   severe: 1.0,
 };
 
+/**
+ * Handles the aeon affectively initialize From Baseline workflow.
+ */
 export function initializeFromBaseline(
   layer: MentalHealthLayer,
   baseline: {

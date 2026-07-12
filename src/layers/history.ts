@@ -29,6 +29,9 @@ export interface HistoryLayer {
   dimensions: typeof HISTORY_DIMENSIONS;
 }
 
+/**
+ * Creates the History Layer.
+ */
 export function createHistoryLayer(): HistoryLayer {
   return {
     boundary: createVoidBoundary(HISTORY_DIMENSIONS.length),
@@ -36,6 +39,9 @@ export function createHistoryLayer(): HistoryLayer {
   };
 }
 
+/**
+ * Handles the aeon affectively initialize From Baseline workflow.
+ */
 export function initializeFromBaseline(
   layer: HistoryLayer,
   baseline: {

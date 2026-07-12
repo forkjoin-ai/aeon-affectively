@@ -19,6 +19,9 @@ export interface TraitsLayer {
   traitIndex: Map<string, number>;
 }
 
+/**
+ * Creates the Traits Layer.
+ */
 export function createTraitsLayer(traitIds: string[]): TraitsLayer {
   const traitIndex = new Map<string, number>();
   traitIds.forEach((id, i) => traitIndex.set(id, i));
@@ -28,6 +31,9 @@ export function createTraitsLayer(traitIds: string[]): TraitsLayer {
   };
 }
 
+/**
+ * Handles the aeon affectively initialize From Baseline workflow.
+ */
 export function initializeFromBaseline(
   layer: TraitsLayer,
   baseline: {

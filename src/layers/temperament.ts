@@ -31,6 +31,9 @@ export interface TemperamentLayer {
   dimensions: typeof TEMPERAMENT_DIMENSIONS;
 }
 
+/**
+ * Creates the Temperament Layer.
+ */
 export function createTemperamentLayer(): TemperamentLayer {
   return {
     boundary: createVoidBoundary(TEMPERAMENT_DIMENSIONS.length),
