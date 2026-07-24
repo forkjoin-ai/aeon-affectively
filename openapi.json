@@ -1,0 +1,90 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "aeon-affectively API",
+    "version": "0.1.0",
+    "description": "GraphQL-projected REST inventory from `federation-projection` via @a0n/x-gql. Topology is the authority."
+  },
+  "paths": {
+    "/api/federationChain": {
+      "get": {
+        "summary": "Resolve a knotchain federation record by chain id.",
+        "operationId": "federationChain",
+        "responses": {
+          "200": {
+            "description": "Returns FederationChain",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FederationChain"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "graphql",
+          "x-gql"
+        ],
+        "x-gg-source": "federation-projection",
+        "x-graphql-projection": true
+      }
+    },
+    "/api/federationLookup": {
+      "get": {
+        "summary": "N1 two-step lookup (route + witness + admissible path proof).",
+        "operationId": "federationLookup",
+        "responses": {
+          "200": {
+            "description": "Returns FederationLookup",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FederationLookup"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "graphql",
+          "x-gql"
+        ],
+        "x-gg-source": "federation-projection",
+        "x-graphql-projection": true
+      }
+    },
+    "/api/federationSnapshot": {
+      "get": {
+        "summary": "Fetch signed federation index snapshot metadata.",
+        "operationId": "federationSnapshot",
+        "responses": {
+          "200": {
+            "description": "Returns FederationSnapshot",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FederationSnapshot"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "graphql",
+          "x-gql"
+        ],
+        "x-gg-source": "federation-projection",
+        "x-graphql-projection": true
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "graphql"
+    },
+    {
+      "name": "x-gql"
+    }
+  ]
+}
